@@ -15,8 +15,7 @@
   }
 
   .list_image {
-    width: 60px;
-    height: 70px;
+    width: 100%;
     text-align: center;
   }
 
@@ -39,15 +38,15 @@
   }
 
   .list_actions {
-    font-size: x-small;
+    font-size: small;
     text-align: center;
     padding-left: 1em;
   }
 
   .list_line_even {
-    background: #e0f8f8;
+    background: #c9ddf5;
   }
   .list_line_odd {
-    background: #f8b0f8;
+    background: #b2ddeb;
   }
 }
