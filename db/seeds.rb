@@ -35,3 +35,4 @@ games.each do |name, description, image, price|
         image: image,
         price: price
     )
+end
