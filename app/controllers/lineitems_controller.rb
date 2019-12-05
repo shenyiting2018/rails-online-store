@@ -1,5 +1,7 @@
 class LineitemsController < ApplicationController
-  before_action :set_lineitem, only: [:show, :edit, :update, :destroy]
+  include CurrentCart
+
+  before_action :set_cart, :set_lineitem, only: [:show, :edit, :update, :destroy]
 
   # GET /lineitems
   # GET /lineitems.json

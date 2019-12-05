@@ -1,4 +1,4 @@
-class Product < ApplicationRecord::Base
+class Product < ApplicationRecord
 	has_many :lineitems
 
 	before_destroy :make_sure_no_line_items
