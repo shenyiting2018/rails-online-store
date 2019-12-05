@@ -15,8 +15,17 @@
   </head>
 
   <body>
-    <div class="container">
-      <%= yield %>
+    <div class="container <%= controller.controller_name %>">
+      <div id="banner"> Amazing Games</div>
+      <div id="columns">
+        <div id="side">
+        </div>
+
+        <div id="main">
+          <%= yield %>
+
+        </div>
+      </div>
     </div>
   </body>
 </html>

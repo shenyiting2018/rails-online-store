@@ -13,10 +13,8 @@
   </thead>
 
   <tbody>
-    <%# rows %>
     <% @products.each do |product| %>
       <tr class="<%= cycle('list_line_even', 'list_line_odd') %>">
-        <%# restrict image size %>
         <td><%= image_tag product.image, :class => "list_image" %></td>
         <td class="list_description">
           <dl>
