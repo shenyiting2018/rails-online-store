@@ -1,4 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<h3><b>Items in your shopping cart</b></h3>
+
+<ul>
+<% @cart.lineitems.each do |lineitem| %>
+	<li><%= lineitem.quantity %> - <%= lineitem.product.name %></li>
+
+<% end %>
+</ul>
+
+<!-- 
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
+ -->
