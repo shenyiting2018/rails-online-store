@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   get 'admin/index'
   resources :lineitems
   resources :carts
