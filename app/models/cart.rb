@@ -12,4 +12,12 @@ class Cart < ApplicationRecord
 
   	return current_item
   end
+
+  def item_total_price
+    sum = 0
+    lineitems.each do |lineitem|  
+      sum += lineitem.product.price * lineitem.quantity
+    end
+    return sum
+  end
 end
