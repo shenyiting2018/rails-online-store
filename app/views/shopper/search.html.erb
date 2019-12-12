@@ -1,0 +1,33 @@
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+<div class="shopper">
+    <% if @products %>
+    	<h3>Searched Results</h3>
+
+        <% @products.each do |product| %>
+            <div class="row product-entry">
+                <div class="col-md-3">
+                    <%= image_tag product.image, :class => "list_image" %>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <h4><%= product.name %></h4>
+                        <p><%= product.description %></p>
+                    </div>
+                    <div class="row price-line">
+                        <div class="col-md-2">
+                        <b class="price"><%= "$" << product.price.to_s %></b>
+                        </div>
+                        <div class="col-md-2">
+                            <%= button_to 'Add to Cart', lineitems_path(product_id: product), class: 'add_to_cart', remote:true %>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    <% else %>
+        <h2>No Result Returned from Your Query</h2>
+    <% end %>
+</div>		

@@ -29,12 +29,18 @@
             <div id="cart">
               <%= render @cart %>
             </div>
+            <div id="search-form">
+              <form action="/shopper/search">
+                <input type="text" name="name" placeholder="Search ...">
+                <button type="submit" class="btn btn-primary">Search!</button>
+              </form>
+            </div>
             <ul>
-              <li><a href="http://www....">Home</a></li>
-              <li><a href="http://www..../faq">Questions</a></li>
-              <li><a href="http://www..../news">News</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Questions</a></li>
+              <li><a href="/">News</a></li>
 
-              <li><a href="http://www..../contact">Contact</a></li>
+              <li><a href="/">Contact</a></li>
             </ul>
 
             <% if session[:user_id] %>
