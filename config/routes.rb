@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :lineitems
   resources :carts
   get 'shopper/', to: "shopper#index", :as => 'shopper'
+  get 'shopper/search', to: "shopper#search"
   get 'admin/', to: "admin#index"
   resources :products
   get 'login/', to: "access#new"

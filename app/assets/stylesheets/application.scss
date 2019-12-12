@@ -1,9 +1,9 @@
 #banner {
-  background: #efc780;
+  background: #8b81c3;
   padding: 10px;
   border-bottom: 2px solid;
   font: 40px/40px "Arial";
-  color: #282;
+  color: white;
   text-align: center;
 
   img {
@@ -20,56 +20,51 @@
   font: bold smaller sans-serif;
 }
 
-#columns {
-  background: grey;
+#side {
+  padding: 1em;
+  background: #986db2;
 
-  #main {
-    margin-left: 17em;
-    padding: 1em;
-    background: white;
+  form, div {
+    display: inline;
   }
 
-  #side {
-    float: left;
-    padding: 1em;
-    width: 13em;
-    // background: #9c947a;
+  input {
+    font-size: small;
+  }
 
-    form, div {
-      display: inline;
+  #cart {
+    font-size: small; 
+    color: white;
+    
+    table {
+      border-collapse: collapse;
+      border-top: 1px dotted #599;
+      border-bottom: 1px dotted #599;
+      margin-bottom: 10px;
     }
 
-    input {
-      font-size: small;
+    tr:nth-child(even), thead {  // even line color
+      background-color: black;
     }
+  }
 
-    #cart {
-      font-size: small; 
-      color: white;
-      
-      table {
-        border-collapse: collapse;
-        border-top: 1px dotted #599;
-        border-bottom: 1px dotted #599;
-        margin-bottom: 10px;
-      }
-
-      tr:nth-child(even), thead {  // even line color
-        background-color: black;
-      }
-    }
-
-    ul {
-      padding: 0;
-      li {
-        list-style: none;
-        a {
-          color: #bfb;
-          font-size: small;
-        }
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      a {
+        color: white;
+        font-size: small;
       }
     }
   }
+}  
+
+#main {
+  padding: 1em;
+  background: #9b90c2;
+  border-left: 2px solid;
+  color: white;
 }
 
 /* Style the header */
@@ -77,4 +72,23 @@
   background-color: #f1f1f1;
   padding: 20px;
   text-align: center;
+}
+
+
+.list_image {
+  width: 100%;
+  height: 180px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.product-entry {
+  border-top-style: dotted;
+  border-top-color: #8b81c3;  
+
+  h
+
+  P {
+    color: #FCFAF2;
+  }
 }
