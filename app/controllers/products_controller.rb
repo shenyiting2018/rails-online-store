@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  # don't use bootstrap in the products file
+  layout 'products'
+
   # GET /products
   # GET /products.json
   def index

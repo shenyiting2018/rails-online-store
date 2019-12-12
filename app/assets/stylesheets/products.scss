@@ -1,11 +1,14 @@
 /* START_HIGHLIGHT */
 .products {
+
+  background-color: #A5DEE4;  
+
   table {
     border-collapse: collapse;
   }
 
   th { // table head
-    background-color: rgb(151, 23, 23);
+    background-color: #336774;
     color: white;
   }
 
@@ -16,6 +19,7 @@
 
   .list_image {
     width: 100%;
+    height: 200px;
     text-align: center;
   }
 
@@ -44,9 +48,9 @@
   }
 
   .list_line_even {
-    background: #c9ddf5;
+    background: #7DB9DE
   }
   .list_line_odd {
-    background: #b2ddeb;
+    background: #81C7D4;
   }
 }

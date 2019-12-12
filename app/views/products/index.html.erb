@@ -1,37 +1,38 @@
-<h1 class="text-center">Products Admin</h1>
 
-<%# customized table %>
-<table class="products table-borderless">
-  <thead>
-    <tr>
-      <th class="text-center">Image</th>
-      <th class="text-center">Description</th>
-      <th class="text-center">Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr class="<%= cycle('list_line_even', 'list_line_odd') %>">
-        <td><%= image_tag product.image, :class => "list_image" %></td>
-        <td class="list_description">
-          <dl>
-            <dt><%= product.name %></dt>
-            <dd><%= product.description %></dd>
-            <dd><%= product.price %></dd>
-          </dl>
-        </td>
-
-        <td class="list_actions">
-          <dt><%= link_to 'Show', product %></dt>
-          <dt><%= link_to 'Edit', edit_product_path(product) %></dt>
-          <dt><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></dt>
-        </td>
+<div class="container products ">
+  <h1 class="text-center title">Products Admin</h1>
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th class="text-center">Image</th>
+        <th class="text-center">Description</th>
+        <th class="text-center">Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr class="<%= cycle('list_line_even', 'list_line_odd') %>">
+          <td><%= image_tag product.image, :class => "list_image" %></td>
+          <td class="list_description">
+            <dl>
+              <dt><%= product.name %></dt>
+              <dd><%= product.description %></dd>
+              <dd><%= "$" + product.price.to_s %></dd>
+            </dl>
+          </td>
 
-<%= link_to 'New Product', new_product_path %>
+          <td class="list_actions">
+            <dt><%= link_to 'Show', product %></dt>
+            <dt><%= link_to 'Edit', edit_product_path(product) %></dt>
+            <dt><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></dt>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Product', new_product_path %>
+</div>
